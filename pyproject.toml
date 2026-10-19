@@ -1,13 +1,13 @@
 [project]
 name = "simple-image-inpainter"
-version = "1.0.0"
-description = "An OpenCV-based tool for smart area inpainting."
+version = "2.0.0"
+description = "An OpenCV-based tool for inpainting regions on simple backgrounds (flat, gradient, light noise)."
 readme = "README.md"
 requires-python = ">=3.10"
 
 dependencies = [
-    "numpy>=1.24.0,<2.0.0",
-    "opencv-python>=4.8.0,<4.11.0"
+    "numpy>=1.24",
+    "opencv-python-headless>=4.8"
 ]
 
 [project.optional-dependencies]
@@ -19,3 +19,10 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
+
+[tool.setuptools.package-data]
+simple_image_inpainter = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -14,4 +14,4 @@ dist/
 venv/
 
 # Tests
-tests/
+.pytest_cache/
